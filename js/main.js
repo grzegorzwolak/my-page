@@ -6,6 +6,9 @@ const navItems = document.querySelectorAll('.nav-mobile__item');
 const navDesktop = document.querySelector('.nav-desktop');
 const topBtn = document.querySelector('.top-btn');
 const meetMeBtn = document.querySelector('.header__aboutme');
+const infoBtns = document.querySelectorAll('.projects__info-btn')
+const infoXBtns = document.querySelectorAll('.projects__hide-info-btn')
+const projectsDescribe = document.querySelectorAll('.projects__item-describe')
 const footerDate = document.querySelector('.footer__date');
 let topNav = window.scrollY;
 
@@ -66,6 +69,19 @@ const addFooterDate = () => {
 
     footerDate.textContent = year.getFullYear()
 }
+
+infoBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.nextElementSibling.classList.remove('hide')
+    })
+})
+
+infoXBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.parentElement.classList.add('hide')
+    })
+})
+
 
 
 burgerBtn.addEventListener('click', showMenu);

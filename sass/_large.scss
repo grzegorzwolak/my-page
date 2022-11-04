@@ -24,16 +24,6 @@
 		}
 	}
 
-	// PROJECTS
-
-	.projects {
-		&__carousel-item {
-			img {
-				width: 500px;
-			}
-		}
-	}
-
 	// CONTACT
 
 	.contact {
@@ -325,27 +315,6 @@
 		&__img {
 			img {
 				height: 300px;
-			}
-		}
-	}
-
-	// PROJECTS
-
-	.projects {
-		&__carousel-item {
-			img {
-				width: 700px;
-			}
-		}
-
-		&__carousel-item-describe {
-			h3 {
-				margin-bottom: 50px;
-				font-size: 3rem;
-			}
-
-			p {
-				font-size: 1.4rem;
 			}
 		}
 	}
