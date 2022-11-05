@@ -1,4 +1,22 @@
+@media (min-width: 450px) {
+	.slick-prev {
+		left: -80px;
+	}
+
+	.slick-next {
+		right: -80px;
+	}
+}
+
 @media (min-width: 576px) {
+	.slick-prev {
+		left: -50px;
+	}
+
+	.slick-next {
+		right: -50px;
+	}
+
 	.header {
 		&__welcome {
 			h1 {
@@ -17,10 +35,35 @@
 
 	.wrapper {
 		.section-title {
-
-			&::before, &::after {
+			&::before,
+			&::after {
 				width: 22%;
 			}
+		}
+	}
+
+	// ABOUTME
+
+	.aboutme {
+		&__text {
+			width: 480px;
+			margin-bottom: 60px;
+		}
+
+		&__carousel {
+			width: 480px;
+		}
+
+		&__small-title {
+			margin-top: 60px;
+		}
+
+		&__skills {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__skill {
+			margin-bottom: 60px;
 		}
 	}
 
@@ -39,7 +82,8 @@
 		&__createdby {
 			width: 50%;
 			display: flex;
-			align-items: center;justify-content: center;
+			align-items: center;
+			justify-content: center;
 		}
 
 		&__socials {
@@ -52,7 +96,6 @@
 }
 
 @media (min-width: 768px) {
-
 	.hide-nav {
 		transform: translateY(-100px);
 		opacity: 0;
@@ -63,11 +106,21 @@
 			margin-bottom: 60px;
 			font-size: 3rem;
 
-			&::before, &::after {
+			&::before,
+			&::after {
 				width: 30%;
 			}
 		}
 	}
+
+	.slick-prev {
+		left: -80px;
+	}
+
+	.slick-next {
+		right: -80px;
+	}
+
 	// HEADER AND NAV
 
 	.header {
@@ -115,7 +168,7 @@
 			left: 50%;
 			display: block;
 			transform: translateX(-50%);
-			transition: .3s;
+			transition: 0.3s;
 		}
 
 		&__aboutme-btn {
@@ -133,12 +186,12 @@
 
 			i {
 				padding: 7px;
-				transition: transform 0.3s, color .3s;
+				transition: transform 0.3s, color 0.3s;
 			}
 
 			span {
 				position: relative;
-				transition: color .3s;
+				transition: color 0.3s;
 
 				&::after,
 				&::before {
@@ -148,7 +201,7 @@
 					width: 0;
 					height: 2px;
 					background-color: colors.$grey;
-					transition: width 0.3s,color .3s;
+					transition: width 0.3s, color 0.3s;
 				}
 
 				&::before {
@@ -193,7 +246,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: backdrop-filter .5s, opacity .5s, transform .5s;
+		transition: backdrop-filter 0.5s, opacity 0.5s, transform 0.5s;
 		z-index: 5;
 
 		&__items {
@@ -246,25 +299,19 @@
 		}
 	}
 
-	// ABOUT ME
+	// ABOUTME
 
 	.aboutme {
-		&__container {
-			flex-direction: row;
-			justify-content: space-evenly;
+
+		&__skills {
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 
-		&__text-box {
-			width: 30%;
-			height: 350px;
-			margin-bottom: 0;
-		}
+		&__skill {
+			transition: transform .3s;
 
-		&__img {
-			width: 30%;
-
-			img {
-				height: 350px;
+			&:hover {
+				transform: scale(1.1);
 			}
 		}
 	}
@@ -272,7 +319,6 @@
 	// PROJECTS
 
 	.projects {
-
 		&__items {
 			flex-direction: row;
 			justify-content: space-evenly;
@@ -304,18 +350,6 @@
 
 		&__mute {
 			font-size: 2.2rem;
-		}
-	}
-
-	.aboutme {
-		&__text-box {
-			height: 300px;
-		}
-
-		&__img {
-			img {
-				height: 300px;
-			}
 		}
 	}
 }

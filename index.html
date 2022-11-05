@@ -16,6 +16,11 @@
 			src="https://kit.fontawesome.com/69c26f29d8.js"
 			crossorigin="anonymous"
 		></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
 
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
@@ -89,35 +94,114 @@
 		<main>
 			<section class="wrapper aboutme" id="aboutme">
 				<h2 class="section-title">about me</h2>
-				<div class="aboutme__hero aboutme__hero--blur"></div>
-				<div class="aboutme__shadow"></div>
 				<div class="aboutme__container">
-					<div class="aboutme__text-box">
-						<p>
-							Hello, <br /><br />
-							I am Grzegorz Wolak and I am a beginner Front-end Developer.
-							<br /><br />
-							I started my adventure with coding in June 2022. Since then I have
-							learned a lot, or at least enough to create this website.
-							<br /><br />
-							Privately, I am interested in new technologies and finance. I love
-							to spend time actively, mostly on a bicycle.
-						</p>
-					</div>
-					<div class="aboutme__img">
-						<div class="aboutme__item">
-							<img
-								src="./img/profile-informal.jpg"
-								alt="Me holding a laptop in one hand and a cup of coffee in the other"
-							/>
+				<div class="aboutme__text">
+					<p>
+						Hi,<br><br>my name is Grzegorz Wolak and I am a beginner Front-end
+						Developer.<br><br>I started my adventure with coding in June 2022. Since
+						then I have learned a lot, or at least enough to create this
+						website.<br><br>Privately, I am interested in new technologies and finance.
+						I love to spend my time actively, mainly on mountain hiking and
+						cycling.
+					</p>
+				</div>
+				<div class="aboutme__carousel-wrapper">
+					<div class="aboutme__carousel">
+						<div class="aboutme__carousel-item">
+							<img src="./img/carousel/profile-informal-1.jpeg" alt="" />
+						</div>
+						<div class="aboutme__carousel-item">
+							<img src="./img/carousel/profile-informal-2.jpeg" alt="" />
+						</div>
+						<div class="aboutme__carousel-item">
+							<img src="./img/carousel/profile-informal-3.jpeg" alt="" />
 						</div>
 					</div>
 				</div>
+			</div>
+				<h3 class="aboutme__small-title">skills</h3>
+
+				<div class="aboutme__skills">
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>HTML5</p></div>
+						<i class="fa-brands fa-html5"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--advanced"></div>
+						</div>
+					</div>
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>CSS3</p></div>
+						<i class="fa-brands fa-css3-alt"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--advanced"></div>
+						</div>
+					</div>
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>SASS</p></div>
+						<i class="fa-brands fa-sass"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--advanced"></div>
+						</div>
+					</div>
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>JAVASCRIPT</p></div>
+						<i class="fa-brands fa-js"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--beginner"></div>
+						</div>
+					</div>
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>BOOTSTRAP v5</p></div>
+						<i class="fa-brands fa-bootstrap"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--beginner"></div>
+						</div>
+					</div>
+					<div class="aboutme__skill">
+						<div class="aboutme__skill-info"><p>GITHUB</p></div>
+						<i class="fa-brands fa-github"></i>
+						<div class="aboutme__skill-scale">
+							<div class="aboutme__skill-scale-rate aboutme__skill-scale-rate--beginner"></div>
+						</div>
+					</div>
+				</div>
+
 			</section>
 			<section class="wrapper projects" id="projects">
 				<h2 class="section-title">projects</h2>
 
 				<div class="projects__items">
+					<div class="projects__item">
+						<div class="projects__info-btn">
+							<button>
+								<i class="fa-regular fa-circle-question"></i>
+							</button>
+						</div>
+						<div class="projects__item-describe hide">
+							<h3>Characters calculator</h3>
+							<p>
+								An application used to count characters entered into a text
+								field. This is my first independent project using javascript, in
+								which I could practice the acquired knowledge.
+							</p>
+							<div class="projects__item-describe-links">
+								<a
+									href="https://grzegorzwolak.github.io/characters-calculator/"
+									target="_blank"
+									>Go to the project</a
+								>
+								<a
+									href="https://github.com/grzegorzwolak/characters-calculator"
+									target="_blank"
+									>Repository</a
+								>
+							</div>
+
+							<button class="projects__hide-info-btn">
+								<i class="fa-solid fa-x"></i>
+							</button>
+						</div>
+					</div>
 					<div class="projects__item">
 						<div class="projects__info-btn">
 							<button>
@@ -221,6 +305,19 @@
 				></a>
 			</p>
 		</footer>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/slick.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>
