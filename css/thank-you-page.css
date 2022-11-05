@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(53, 53, 53);
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(217, 217, 217);
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__hero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.main__hero--img {
+  background-image: url("../img/nepal-2184940_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -5;
+}
+.main__hero--blur {
+  background-color: rgba(60, 110, 113, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: -3;
+}
+.main__container {
+  position: relative;
+  width: 340px;
+  padding: 40px;
+  background-color: rgba(60, 110, 113, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  text-align: center;
+  border-radius: 8px;
+  z-index: 10;
+}
+.main__container h1 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+.main__container p {
+  font-size: 1.8rem;
+}
+.main__back {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main__back a {
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
+}
+.main__back a:hover {
+  color: rgb(217, 217, 217);
+}/*# sourceMappingURL=thank-you-page.css.map */
