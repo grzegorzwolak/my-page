@@ -269,19 +269,21 @@
 				<h2 class="section-title">contact me</h2>
 
 				<div class="contact__form-container">
-					<form class="contact__form">
+					<form class="contact__form" action="https://formsubmit.io/send/grzegorzwolak97@gmail.com" method="POST">
+						<input name="_redirect" type="hidden" id="name" value="https://www.youtube.com/">
 						<div class="contact__form-box">
 							<label for="name">Your name</label>
-							<input type="text" id="name" />
+							<input name="name" type="text" id="name" placeholder="Type your name"/>
 						</div>
 						<div class="contact__form-box">
 							<label for="mail">Your email</label>
-							<input type="email" id="mail" />
+							<input name="email" type="email" id="email" placeholder="Type your email address"/>
 						</div>
 						<div class="contact__form-box">
 							<label for="msg">Message:</label>
-							<textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+							<textarea name="msg" id="msg" placeholder="Type your message"></textarea>
 						</div>
+						<input name="_formsubmit_id" type="text" style="display:none">
 
 						<button type="submit" class="contact__form-btn">
 							Send me an email
