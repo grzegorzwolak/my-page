@@ -167,8 +167,9 @@
 			bottom: 0px;
 			left: 50%;
 			display: block;
-			transform: translateX(-50%);
+			transform: translate(-50%, 0);
 			transition: 0.3s;
+			animation: slideBtnMeetme 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s backwards;
 		}
 
 		&__aboutme-btn {
@@ -183,6 +184,7 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			color: colors.$white;
+			animation: bounceBtnMeetme 2s 2s infinite both;
 
 			i {
 				padding: 7px;
@@ -247,6 +249,7 @@
 		align-items: center;
 		justify-content: center;
 		transition: backdrop-filter 0.5s, opacity 0.5s, transform 0.5s;
+		animation: slideNavDesktop 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s backwards;
 		z-index: 5;
 
 		&__items {

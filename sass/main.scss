@@ -1,4 +1,5 @@
 @use 'colors';
+@use '_animations';
 
 *,
 *::after,
@@ -69,6 +70,19 @@ body {
 	right: 0;
 }
 
+// OBSERVER
+
+.hidden {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all .5s;
+}
+
+.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 // HEADER AND NAV
 
 .header {
@@ -109,6 +123,7 @@ body {
 	&__welcome {
 		margin: 150px 0 50px 0;
 		text-align: center;
+		animation: headerSlideWelcome 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 
 		h1 {
 			font-size: 4rem;
@@ -139,6 +154,8 @@ body {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
+		animation: headerProfile 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s backwards;
+	
 	}
 
 	&__profile-img {
@@ -388,7 +405,7 @@ body {
 		flex-direction: column;
 		font-size: 7rem;
 
-		&:hover .aboutme__skill-info{
+		&:hover .aboutme__skill-info {
 			opacity: 1;
 		}
 	}
@@ -397,7 +414,7 @@ body {
 		position: absolute;
 		bottom: -20px;
 		opacity: 0;
-		transition: opacity .3s;
+		transition: opacity 0.3s;
 
 		p {
 			font-size: 1.4rem;

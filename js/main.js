@@ -10,6 +10,7 @@ const infoBtns = document.querySelectorAll('.projects__info-btn')
 const infoXBtns = document.querySelectorAll('.projects__hide-info-btn')
 const projectsDescribe = document.querySelectorAll('.projects__item-describe')
 const footerDate = document.querySelector('.footer__date');
+const hiddenElements = document.querySelectorAll('.hidden')
 let topNav = window.scrollY;
 
 const showMenu = () => {
@@ -82,6 +83,15 @@ infoXBtns.forEach(btn => {
     })
 })
 
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show')
+		}
+	})
+})
+
+hiddenElements.forEach(el => observer.observe(el))
 
 
 burgerBtn.addEventListener('click', showMenu);
