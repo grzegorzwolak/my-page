@@ -184,7 +184,7 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			color: colors.$white;
-			animation: bounceBtnMeetme 2s 2s infinite both;
+			animation: heartBeatBtnMeetme 1.5s ease-in-out 2s infinite both;
 
 			i {
 				padding: 7px;
@@ -216,6 +216,8 @@
 			}
 
 			&:hover {
+				animation-play-state: paused;
+				
 				span {
 					color: colors.$grey;
 
