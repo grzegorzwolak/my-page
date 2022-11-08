@@ -557,7 +557,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 8px;
-  transition: opacity 0.3s;
 }
 .projects__item-describe h3 {
   text-align: center;
