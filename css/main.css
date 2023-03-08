@@ -1,27 +1,9 @@
-@-webkit-keyframes headerProfile {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes headerProfile {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes headerSlideWelcome {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 @keyframes headerSlideWelcome {
@@ -34,16 +16,6 @@
     transform: translateX(0);
   }
 }
-@-webkit-keyframes slideNavDesktop {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes slideNavDesktop {
   from {
     opacity: 0;
@@ -52,16 +24,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes slideBtnMeetme {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 50px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
   }
 }
 @keyframes slideBtnMeetme {
@@ -85,59 +47,26 @@
  * animation heartbeat
  * ----------------------------------------
  */
-@-webkit-keyframes heartBeatBtnMeetme {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
 @keyframes heartBeatBtnMeetme {
   from {
     transform: scale(1);
     transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
     transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
     transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
     transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
     transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
@@ -254,8 +183,7 @@ body::-webkit-scrollbar-thumb {
 .header__welcome {
   margin: 150px 0 50px 0;
   text-align: center;
-  -webkit-animation: headerSlideWelcome 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          animation: headerSlideWelcome 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: headerSlideWelcome 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .header__welcome h1 {
   font-size: 4rem;
@@ -280,8 +208,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   width: 100%;
-  -webkit-animation: headerProfile 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s backwards;
-          animation: headerProfile 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s backwards;
+  animation: headerProfile 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s backwards;
 }
 .header__profile-img {
   position: relative;
@@ -540,10 +467,18 @@ body::-webkit-scrollbar-thumb {
   width: 300px;
   height: 200px;
   margin-bottom: 30px;
-  background-image: url("../img/projects/characters-calculator.png");
   background-size: cover;
   background-position: center;
   border-radius: 8px;
+}
+.projects__item--one {
+  background-image: url("../img/projects/characters-calculator.png");
+}
+.projects__item--two {
+  background-image: url("../img/projects/simple-calculator.png");
+}
+.projects__item--three {
+  background-image: url("../img/projects/about-countries.png");
 }
 .projects__item-describe {
   position: absolute;
@@ -556,6 +491,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(60, 110, 113, 0.3);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  color: black;
   border-radius: 8px;
 }
 .projects__item-describe h3 {
@@ -571,7 +507,7 @@ body::-webkit-scrollbar-thumb {
 }
 .projects__item-describe-links a {
   margin-top: 5px;
-  color: rgb(255, 255, 255);
+  color: black;
   transition: color 0.3s;
 }
 .projects__item-describe-links a:hover {
@@ -590,7 +526,8 @@ body::-webkit-scrollbar-thumb {
 }
 .projects i {
   font-size: 2rem;
-  color: rgb(255, 255, 255);
+  font-weight: bold;
+  color: black;
   transition: color 0.3s, transform 0.3s;
 }
 .projects i:hover {
@@ -608,7 +545,7 @@ body::-webkit-scrollbar-thumb {
 }
 .projects__hide-info-btn i {
   font-size: 1.2rem;
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 .contact__form-container {
@@ -820,8 +757,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     transform: translate(-50%, 0);
     transition: 0.3s;
-    -webkit-animation: slideBtnMeetme 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
-            animation: slideBtnMeetme 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
+    animation: slideBtnMeetme 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
   }
   .header__aboutme-btn {
     display: flex;
@@ -835,8 +771,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    -webkit-animation: heartBeatBtnMeetme 1.5s ease-in-out 2s infinite both;
-            animation: heartBeatBtnMeetme 1.5s ease-in-out 2s infinite both;
+    animation: heartBeatBtnMeetme 1.5s ease-in-out 2s infinite both;
   }
   .header__aboutme-btn i {
     padding: 7px;
@@ -862,8 +797,7 @@ body::-webkit-scrollbar-thumb {
     right: 50%;
   }
   .header__aboutme-btn:hover {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
+    animation-play-state: paused;
   }
   .header__aboutme-btn:hover span {
     color: rgb(217, 217, 217);
@@ -891,8 +825,7 @@ body::-webkit-scrollbar-thumb {
     transition: opacity 0.5s, transform 0.5s, -webkit-backdrop-filter 0.5s;
     transition: backdrop-filter 0.5s, opacity 0.5s, transform 0.5s;
     transition: backdrop-filter 0.5s, opacity 0.5s, transform 0.5s, -webkit-backdrop-filter 0.5s;
-    -webkit-animation: slideNavDesktop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
-            animation: slideNavDesktop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
+    animation: slideNavDesktop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s backwards;
     z-index: 5;
   }
   .nav-desktop__items {

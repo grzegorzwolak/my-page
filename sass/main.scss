@@ -467,10 +467,21 @@ body {
 		width: 300px;
 		height: 200px;
 		margin-bottom: 30px;
-		background-image: url('../img/projects/characters-calculator.png');
 		background-size: cover;
 		background-position: center;
 		border-radius: 8px;
+
+		&--one {
+			background-image: url('../img/projects/characters-calculator.png');
+		}
+
+		&--two {
+			background-image: url('../img/projects/simple-calculator.png');
+		}
+
+		&--three {
+			background-image: url('../img/projects/about-countries.png');
+		}
 	}
 
 	&__item-describe {
@@ -483,6 +494,7 @@ body {
 		font-size: 1.1rem;
 		background-color: rgba(60, 110, 113, 0.3);
 		backdrop-filter: blur(5px);
+		color: black;
 		border-radius: 8px;
 
 		h3 {
@@ -500,7 +512,7 @@ body {
 
 		a {
 			margin-top: 5px;
-			color: colors.$white;
+			color: black;
 			transition: color 0.3s;
 
 			&:hover {
@@ -524,7 +536,8 @@ body {
 
 	i {
 		font-size: 2rem;
-		color: colors.$white;
+		font-weight: bold;
+		color: black;
 		transition: color 0.3s, transform 0.3s;
 
 		&:hover {
@@ -544,7 +557,7 @@ body {
 
 		i {
 			font-size: 1.2rem;
-			color: colors.$white;
+		color: black;
 		}
 	}
 }
